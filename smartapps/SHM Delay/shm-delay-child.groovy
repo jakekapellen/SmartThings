@@ -22,8 +22,8 @@
  *  Unless required by applicable law or agreed to in writing, software distributed under the License is distributed
  *  on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License
  *  for the specific language governing permissions and limitations under the License.
- *  Jul 27  2018 v2.1.0  major refactoring, adding multi-contact-sensor support, ignoring certain contact sensors
- 						 	in "Stay" mode, and scheduled beeping by sirens during entry/exit delay
+ *  	Jul 27  2018 v2.1.0  major refactoring, adding multi-contact-sensor support, ignoring certain contact sensors
+ *						 	in "Stay" mode, and scheduled beeping by sirens during entry/exit delay
  *	Jul 19	2018 v2.0.8  fix logic error created by 2.0.7 in new_monitor now has a true/false flag when called 
  *	Jul 19	2018 v2.0.7  Send open door message immediately on arming Run CheckStatus in new_monitor 
  *	Jun 27	2018 v2.0.6  Add logic to trigger SHM Delay Talker exitDelay when away mode triggered by non_keypad device 
@@ -124,8 +124,8 @@
  */
 definition(
     name: "SHM Delay Child",
-    namespace: "arnbme",
-    author: "Arn Burkhoff",
+    namespace: "jakekapellen",
+    author: "Jake Kapellen",
     description: "(${version()}) Child Delay Profile, Smart Home Monitor Exit/Entry Delays",
     category: "My Apps",
     parent: "arnbme:SHM Delay",
@@ -145,7 +145,7 @@ preferences {
 
 def version()
 	{
-	return "2.0.8";
+	return "2.1.0";
 	}
 	
 def pageZeroVerify()
